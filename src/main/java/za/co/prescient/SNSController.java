@@ -15,7 +15,6 @@ public class SNSController implements RequestHandler<SNSEvent, String> {
         for (SNSEvent.SNSRecord snsRecord : input.getRecords()) {
             Utils.process(snsRecord);
         }
-
         return "OK";
     }
 }
