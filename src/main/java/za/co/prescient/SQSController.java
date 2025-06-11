@@ -18,5 +18,4 @@ public class SQSController implements RequestHandler<SQSEvent, String> {
         }
         return "OK";
     }
-
 }

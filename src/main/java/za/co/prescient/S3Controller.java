@@ -11,9 +11,9 @@ public class S3Controller implements RequestHandler<String, String> {
 
     @Override
     public String handleRequest(String jsonS3Event, Context context) {
+        System.out.println("Message received: " + jsonS3Event);
         S3EventNotification s3EventNotification = S3EventNotification.fromJson(jsonS3Event);
         Utils.process(s3EventNotification);
         return "OK";
     }
-
 }

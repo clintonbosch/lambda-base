@@ -12,8 +12,7 @@ public class Utils {
         System.out.println("Processing " + message);
 
         // If the SNS record is as a result of an S3 trigger then the message can be converted to an S3EventNotification
-//        S3EventNotification s3EventNotification = S3EventNotification.fromJson(message);
-//        Utils.process(s3EventNotification);
+//        Utils.process(S3EventNotification.fromJson(message));
     }
 
     public static void process(SQSEvent.SQSMessage sqsMessage) {
@@ -29,7 +28,7 @@ public class Utils {
     public static void process(S3EventNotificationRecord record) {
         String bucket = record.getS3().getBucket().getName();
         String key = record.getS3().getObject().getKey();
-        System.out.println("Received new S3 record: " + bucket + " : " + key);
+        System.out.println("Processing: " + bucket + " : " + key);
     }
 
 }
