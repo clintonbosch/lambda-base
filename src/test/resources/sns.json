@@ -1,0 +1,38 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "eu-west-1",
+      "eventTime": "2025-06-06T17:55:02.730Z",
+      "eventName": "ObjectCreated:Put",
+      "userIdentity": {
+        "principalId": "AWS:AIDA2UE6FISV4KXM3RSHV"
+      },
+      "requestParameters": {
+        "sourceIPAddress": "163.116.180.133"
+      },
+      "responseElements": {
+        "x-amz-request-id": "0G1VW15HZVV9VVJA",
+        "x-amz-id-2": "fyAAu+5HOL9k0/bYB+pBFOXLlNPElFSOPPPvBCcc/bdiVhHiV5+xv8Q1HRtoYpR3LUz4dVzn6Rshq2/Q4iP3wMzT0FvhAG21"
+      },
+      "s3": {
+        "s3SchemaVersion": "1.0",
+        "configurationId": "object-created",
+        "bucket": {
+          "name": "pfs-trustlink-swift",
+          "ownerIdentity": {
+            "principalId": "A1X8T9NSUFFH75"
+          },
+          "arn": "arn:aws:s3:::pfs-trustlink-swift"
+        },
+        "object": {
+          "key": "test.txt",
+          "size": 2901,
+          "eTag": "05a1328befe0fafc6f050e863ba6a834",
+          "sequencer": "0068432B76AE428A6D"
+        }
+      }
+    }
+  ]
+}
