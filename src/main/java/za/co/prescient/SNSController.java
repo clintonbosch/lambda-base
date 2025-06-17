@@ -7,14 +7,14 @@ import com.amazonaws.services.lambda.runtime.events.SNSEvent;
 /**
  * The purpose of this handler is to kick off a process from and SNS trigger
  */
-public class SNSController implements RequestHandler<SNSEvent, String> {
+public class SNSController implements RequestHandler<SNSEvent, Void> {
 
     @Override
-    public String handleRequest(SNSEvent input, Context context) {
+    public Void handleRequest(SNSEvent input, Context context) {
         System.out.println("Message received: " + input.toString());
         for (SNSEvent.SNSRecord snsRecord : input.getRecords()) {
             Utils.process(snsRecord);
         }
-        return "OK";
+        return null;
     }
 }

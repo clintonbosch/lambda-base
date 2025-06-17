@@ -9,7 +9,7 @@ public class Utils {
 
     public static void process(SNSEvent.SNSRecord record) {
         String message = record.getSNS().getMessage();
-        System.out.println("Processing " + message);
+        System.out.println("Processing: " + message);
 
         // If the SNS record is as a result of an S3 trigger then the message can be converted to an S3EventNotification
 //        Utils.process(S3EventNotification.fromJson(message));

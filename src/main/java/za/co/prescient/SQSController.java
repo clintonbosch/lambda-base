@@ -8,14 +8,14 @@ import com.amazonaws.services.lambda.runtime.events.SQSEvent;
 /**
  * The purpose of this handler is to kick off a process from and SNS trigger
  */
-public class SQSController implements RequestHandler<SQSEvent, String> {
+public class SQSController implements RequestHandler<SQSEvent, Void> {
 
     @Override
-    public String handleRequest(SQSEvent input, Context context) {
+    public Void handleRequest(SQSEvent input, Context context) {
         System.out.println("Message received: " + input.toString());
         for (SQSEvent.SQSMessage sqsMessage : input.getRecords()) {
             Utils.process(sqsMessage);
         }
-        return "OK";
+        return null;
     }
 }

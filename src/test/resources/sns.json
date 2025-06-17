@@ -20,11 +20,11 @@
         "s3SchemaVersion": "1.0",
         "configurationId": "object-created",
         "bucket": {
-          "name": "pfs-trustlink-swift",
+          "name": "my-bucket",
           "ownerIdentity": {
             "principalId": "A1X8T9NSUFFH75"
           },
-          "arn": "arn:aws:s3:::pfs-trustlink-swift"
+          "arn": "arn:aws:s3:::my-bucket"
         },
         "object": {
           "key": "test.txt",
