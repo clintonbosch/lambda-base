@@ -13,8 +13,8 @@ public class UtilsUnitTest {
 
     @Before
     public void before() {
-        environmentVariablesRule.set("envVariable1", TestConstants.PARAM_VARIABLE_1)
-                .set("envVariable2", TestConstants.PARAM_VARIABLE_2);
+//        environmentVariablesRule.set("envVariable1", TestConstants.PARAM_VARIABLE_1)
+//                .set("envVariable2", TestConstants.PARAM_VARIABLE_2);
     }
 
     @Test
