@@ -17,6 +17,7 @@ public class Utils {
 
     public static void process(SQSEvent.SQSMessage sqsMessage) {
         System.out.println("Processing: " + sqsMessage.getBody());
+        System.out.println("Endpoint = " + System.getenv(Constants.PARAM_ENDPOINT));
     }
 
     public static void process(S3EventNotification s3EventNotification) {
