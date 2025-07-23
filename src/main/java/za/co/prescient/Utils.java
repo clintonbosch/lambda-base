@@ -2,8 +2,7 @@ package za.co.prescient;
 
 import com.amazonaws.services.lambda.runtime.events.SNSEvent;
 import com.amazonaws.services.lambda.runtime.events.SQSEvent;
-import software.amazon.awssdk.eventnotifications.s3.model.S3EventNotification;
-import software.amazon.awssdk.eventnotifications.s3.model.S3EventNotificationRecord;
+import com.amazonaws.services.lambda.runtime.events.models.s3.S3EventNotification;
 
 public class Utils {
 
@@ -21,12 +20,12 @@ public class Utils {
     }
 
     public static void process(S3EventNotification s3EventNotification) {
-        for (S3EventNotificationRecord record : s3EventNotification.getRecords()) {
+        for (S3EventNotification.S3EventNotificationRecord record : s3EventNotification.getRecords()) {
             process(record);
         }
     }
 
-    public static void process(S3EventNotificationRecord record) {
+    public static void process(S3EventNotification.S3EventNotificationRecord record) {
         String bucket = record.getS3().getBucket().getName();
         String key = record.getS3().getObject().getKey();
         System.out.println("Processing: " + bucket + " : " + key);
